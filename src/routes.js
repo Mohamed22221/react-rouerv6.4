@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./layout/App";
 import Home, { loader as homeLoader } from "./bages/Home";
-import PostDetails ,{ loader as postLoader } from "./bages/PostDetails";
-import Contact from "./bages/Contact";
+import PostDetails, { loader as postLoader } from "./bages/PostDetails";
+import LazyLoading from "./bages/LazyLoading";
 import Faq from "./bages/Faq";
 import ErrorPage from "./bages/ErrorPage";
 import UserRoot from "./layout/UserRoot";
@@ -15,16 +15,22 @@ export const routes = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Home />, loader: homeLoader },
+      {
+        index: true,
+        element: <Home />,
+        loader: homeLoader,
+        lazy: () => import("./bages/Home"),
+      },
       {
         path: "posts/:postId",
         element: <PostDetails />,
-        loader: postLoader
+        loader: postLoader,
+        lazy: () => import("./bages/PostDetails"),
       },
 
       {
-        path: "contact",
-        element: <Contact />,
+        path: "lazy",
+        element: <LazyLoading />,
       },
       {
         path: "faq",

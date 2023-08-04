@@ -7,13 +7,13 @@ const Header = () => {
     <h1>Learn code</h1>
     <ul>
       <li>
-        <NavLink to="/" end>home</NavLink>
+        <NavLink to="/" end>Home</NavLink>
       </li>
       <li>
-        <NavLink to="faq">faq</NavLink>
+        <NavLink to="location">Location</NavLink>
       </li>
       <li>
-      <NavLink to="contact">contact</NavLink>
+      <NavLink to="lazy">Lazy</NavLink>
       </li>
 
     </ul>
