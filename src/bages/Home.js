@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 
 export async function loader() {
@@ -21,7 +21,8 @@ export async function loader() {
 
 export default function Home() {
   const posts = useLoaderData();
-  console.log(posts)
+  const { postId } = useParams();
+  console.log(postId)
   return (
     <div>
       {posts.length > 0 ? (
