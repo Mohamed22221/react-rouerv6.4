@@ -6,6 +6,7 @@ const LazyLoading = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <div>
         <OtherLazy />
+        
       </div>
     </Suspense>
   );

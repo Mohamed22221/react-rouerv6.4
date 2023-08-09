@@ -33,7 +33,7 @@ export const routes = createBrowserRouter([
         element: <LazyLoading />,
       },
       {
-        path: "faq",
+        path: "location",
         element: <Faq />,
       },
     ],
