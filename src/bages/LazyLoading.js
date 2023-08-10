@@ -3,10 +3,11 @@ const OtherLazy = lazy(() => import("../components/lazy"));
 
 const LazyLoading = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>Loading......</div>}>
       <div>
-        <OtherLazy />
-        
+        <h2>moooo</h2>
+    g    <OtherLazy />
+        componet lazy
       </div>
     </Suspense>
   );

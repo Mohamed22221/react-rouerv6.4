@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-const Faq = () => {
+const Location = () => {
   const location = useLocation()
   console.log(location)
   return (
@@ -9,4 +9,4 @@ const Faq = () => {
   )
 }
 
-export default Faq
+export default Location

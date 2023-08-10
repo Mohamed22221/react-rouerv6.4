@@ -3,7 +3,7 @@ import App from "./layout/App";
 import Home, { loader as homeLoader } from "./bages/Home";
 import PostDetails, { loader as postLoader } from "./bages/PostDetails";
 import LazyLoading from "./bages/LazyLoading";
-import Faq from "./bages/Faq";
+import Location from "./bages/Location";
 import ErrorPage from "./bages/ErrorPage";
 import UserRoot from "./layout/UserRoot";
 import UserInfo from "./bages/UserInfo";
@@ -34,7 +34,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "location",
-        element: <Faq />,
+        element: <Location />,
       },
     ],
   },

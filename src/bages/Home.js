@@ -3,10 +3,10 @@ import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 
 export async function loader() {
-  const API = 'https://jsonplaceholder.typicode.com/posts?userId=1';
+  const URL = 'https://jsonplaceholder.typicode.com/posts?userId=1';
 
   try {
-    const response = await fetch(API);
+    const response = await fetch(URL);
     if (!response.ok) throw new Error();
 
     const data = await response.json();
